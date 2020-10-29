@@ -1,0 +1,14 @@
+---
+applications:
+  - name: maratona-desafio8-rf
+    path: .
+    buildpacks:
+      - python_buildpack
+    command: python app.py
+    instances: 1
+    routes:
+      - route: maratona-desafio8-rf.mybluemix.net
+    random-route: true
+    memory: 128M
+    env:
+      LOCATION: 'IBM Cloud'
